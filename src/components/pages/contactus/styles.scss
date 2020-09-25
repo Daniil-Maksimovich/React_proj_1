@@ -1,0 +1,149 @@
+@import '../../../styles/variables.scss';
+.map{
+    height: 90vh;
+    iframe{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+.heading{
+    margin: 30px 0;
+}
+.team-members{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.team-members-member{
+    text-align: center;
+    h2{
+        font-size: 35px;
+    }
+
+    img{
+        height: 250px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .button{
+        margin-top: 15px;
+    }
+    h3{
+        color: $green;
+        font-size: 25px;
+        font-weight: normal;
+    }
+}
+.contacts {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    background-color: $blueback;
+    .button{
+        color: #fff;
+        border-color: #fff;
+    }
+}
+.contacts .container{
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.5);
+    .heading{
+        h1{
+            color: #fff;
+        }
+    }  
+}
+.contacts-content{
+    width: 50%;
+}
+.contacts-content a{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(113, 88, 255);
+}
+.contacts-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    div{
+        width: 50%;
+        h2{
+            font-size: 40px;
+            font-weight: normal;
+        }
+        h4{
+            max-width: 200px;
+            font-family: "Open Sans", cursive;
+        }
+        h3{
+            font-size: 30px;
+            font-weight: normal;
+            margin: 20px 0;
+        }
+    }
+}
+.contacts-content-message{
+    display: block;
+    padding-left: 20px;
+    label{
+        display: block;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Open Sans", cursive;
+        textarea,input{
+            width: 80%;
+            margin-left: auto;
+            border-radius: 5px;
+            border: none;
+        }
+        textarea{
+            height: 30vh;
+        }
+        input{
+            height: 30px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:1000px){
+    .team-members{
+        display: block;
+    }
+    .team-members-member{
+        margin-top: 30px;
+    }
+    .hidden {
+        display: none;
+    }
+    .contacts-content {
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+@media screen and (max-width:450px){
+    
+    .team-members-member img{
+        height: 200px;
+    }
+    .contacts-content {
+        padding: 0;
+    }
+    .contacts-wrapper div {
+        h2{
+            font-size: 30px;
+        }
+        a{
+            font-size: 14px;
+        }
+        h3{
+            font-size: 14px;            
+        }
+    }
+}

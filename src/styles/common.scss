@@ -1,0 +1,89 @@
+@import './fonts.scss';
+@import './variables.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Bebas Neue', cursive ;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+button{
+    outline: none;
+}
+.active{
+    color: #fff94f;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wrapper{
+    text-align: center;
+    padding: 50px 0;
+}
+
+.heading{
+    text-align: center;
+    h1{
+        font-size: 50px;
+        font-weight: normal;
+        color: $grey;
+    }
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+    display: inline-block;
+    padding: 9px 29px;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    border: 3px solid $green;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: $green;
+    transition: .4s ease-in-out;
+}
+.button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(245, 241, 241, 0.13), rgba(241, 239, 239, 0.62));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -7px;
+    left: -80px;
+    transform: skewX(-45deg);
+}
+.button:hover {
+    background-color: $green;
+    color: #f9f5f8;
+}
+.button:hover:before {
+    left: 162px;
+    transition: .5s ease-in-out;
+}

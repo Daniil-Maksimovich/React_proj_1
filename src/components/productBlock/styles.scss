@@ -1,0 +1,48 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/variables.scss';
+
+.product_block{
+    width: 350px;
+    min-height: 350px;
+    padding: 15px;
+    display: inline-block;
+    border: 1px solid $grey;
+    border-bottom: 5px solid #3cc395;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    img{
+        margin: 10px 0;
+    }
+
+}
+.product_block:hover{
+    box-shadow: 5px 5px 10px 5px $grey;
+    transition: 0.3s;
+}
+.product_block-content{
+    margin-top: 20px;
+    text-align: center;
+    color: $grey;
+    .product_block-content-button{
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:440px){
+    .product_block{
+        width: 250px;
+        min-height: 250px;
+        .button{
+            padding: 8px 15px;
+            font-size: 13px;
+        }
+        .image_block img{
+            height: 130px !important;
+        }
+    }
+}
+

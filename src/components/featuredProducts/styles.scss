@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+.featured_products-heading{
+    background: $blueback;
+    h1{
+        font-size: 35px;
+        font-weight: normal;
+        color: #fff;
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,226 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/variables.scss';
+
+.header-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.header-search h1{
+    font-family: 'Lobster', cursive;
+    color: $blueback;
+    font-size: 50px;
+}
+.header-search-bag{
+    color: $blueback;
+    display: flex;
+    align-items: center;
+    svg{
+        font-size: 40px;
+    }
+    h1{
+        cursor: pointer;
+        font-family: 'Bebas Neue', cursive ;
+        color: $grey;
+        font-size: 40px;
+        margin-left: 20px;
+        opacity: 0.4;
+        font-weight: normal;
+    }
+}
+.header-search-input {
+    input, button{
+        height: 40px;
+        border: 1px solid #e1e1e1;
+    }
+    input{
+        border-radius: 5px 0 0 5px;
+        width: 340px;
+        padding-left: 10px;
+        border-right: #fff;
+        outline: none;
+    }
+    button{
+        border-radius: 0 5px 5px 0;
+        color: #fff;
+        border-left: #fff;
+        background-color: #fff;
+        padding-right: 10px;
+        svg{
+            font-size: 15px;
+            color: #e1e1e1;
+        }
+    }
+}
+.header-navigation{
+    background-color: $blueback;
+    width: 100%;
+}
+.header-navigation ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    h2{
+        font-weight: normal;
+        font-size: 30px;
+    }
+}
+.header-navigation-border{
+    height: 24px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.header-navigation-menu-burger_menu{
+    display: none;
+}
+
+.header-navigation-menu-burger_menu-button {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    position: fixed;
+    top: 42px;
+    right: 25px;
+    z-index: 30;
+    border-radius: 50%;
+    background-color: $blueback;
+}
+
+.header-navigation-menu-burger_menu-button:hover .header-navigation-menu-burger_menu-lines {
+    filter: brightness(0.7);
+    transition: 0.2s;
+}
+
+.header-navigation-menu-burger_menu-lines,
+.header-navigation-menu-burger_menu-lines::before,
+.header-navigation-menu-burger_menu-lines::after {
+    height: 2.5px;
+    width: 14px;
+    position: absolute;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.header-navigation-menu-burger_menu-lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+}
+
+.header-navigation-menu-burger_menu-lines::after {
+    top: -5px;
+    content: '';
+    transition: .2s;
+}
+
+.header-navigation-menu-burger_menu-lines::before {
+    top: 5px;
+    content: '';
+    transition: .2s;
+}
+
+.burger_menu-active .header-navigation-menu-burger_menu-lines {
+    background-color: transparent;
+}
+
+.burger_menu-active .header-navigation-menu-burger_menu-lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger_menu-active .header-navigation-menu-burger_menu-lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.header-navigation-menu-burger_menu-nav{
+    height: 100%;
+    width: 180px;
+    padding-top: 50px;
+    position: fixed;
+    z-index: 20;
+    display: none;
+    flex-flow: column;
+    background-color: $blueback;
+    overflow: auto;
+    right: 0;
+    top: 0;
+    ul{
+        display: block;
+        li{
+            margin: 10px 20px;
+        }
+    }
+}
+.header-navigation-menu-burger_menu-nav .burger_menu-active{
+    right: 0;
+}
+.header-navigation-menu-burger_menu-overlay{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.burger_menu-active .header-navigation-menu-burger_menu-overlay{
+    display: block;
+}
+
+
+@media screen and (max-width:1200px){
+    .container{
+        padding: 0 8px;
+    }
+}
+@media screen and (max-width:650px){
+    .header-navigation-menu-burger_menu{
+        display: block;
+    }
+    .header-search{
+        height: 40px;
+    }
+    .header-navigation{
+        height: 30px;
+    }
+    
+    .header-navigation-list{
+        *{
+            display: none;
+        }
+    }
+    .header-search-bag{
+        svg{
+            font-size: 20px;
+        }
+        h1{
+            font-size: 15px !important;
+        }
+    }
+    .header-search-input {
+        input{
+            width: 100%;
+            max-width: 150px;
+            height: 20px;
+        }
+        button{
+            height: 20px;
+            padding: 0;
+            svg{
+                padding-bottom: 3px;
+                font-size:10px;
+            }
+        }
+
+    }
+    .header-search h1{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+}

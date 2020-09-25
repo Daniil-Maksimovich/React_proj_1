@@ -1,0 +1,136 @@
+@import '../../styles/fonts.scss';
+@import '../../styles/variables.scss';
+
+
+.slider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: url('./background/Layer.png');
+    .container{
+        display: flex;
+        padding-top: 10vh;
+    }
+}
+.slide{
+    min-width: 100%;
+    min-height: 600px;
+    transition: .5s;
+}
+.slider_button{
+    width: 8%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    svg{
+        color:#fff;
+        font-size: 25px;
+    }
+}
+.slider .image_block img{
+    height: 400px !important;
+}
+.slider_button:hover{
+    background: rgba(0,0,0,0.165);
+    transition: .3s;
+}
+.prev{
+    left: 0;
+
+}
+.next{
+    right: 0;
+}
+
+.slider-content{
+    padding: 0 8%;
+}
+
+
+
+.image_block{
+    min-width: 50%;
+}
+.slider{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    
+    h1{
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    h3{
+        margin-top: 20px;
+        text-decoration: line-through;
+        font-weight: normal;
+        font-size: 35px;
+        opacity: 0.7;
+    }
+    h2{
+        font-size: 45px;
+    }
+}
+.slider-content-btn{
+    margin: 40px 0;
+    border: 3px solid #fff;
+    background: none;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive ;
+    letter-spacing: 3px;
+    border-radius: 10px;
+}
+.slider-content-btn:hover{
+    transition: 0.15s;
+    color: $blueback;
+    background: rgba(255,255,255, 0.65);
+}
+
+@media screen and (max-width:1200px){
+    .slider .image_block img{
+        height: 300px !important;
+    }
+}
+@media screen and (max-width:650px){
+    .slider .container{
+        display: block;
+    }
+    .slider{    
+        h1{
+            font-size: 30px;
+        }
+        h2{
+            font-size: 35px;
+        }
+        h3{
+            font-size: 25px;
+        }
+        .slider-content-btn{
+            padding: 8px 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    .slider_button{
+        width: 15%;
+    }
+    .slider-content{
+        padding: 0 15%;
+        text-align: center;
+    }
+    .slider .image_block img{
+        height: 200px !important;
+    }
+}
