@@ -49,15 +49,19 @@ const ProductInfo = ({location}) => {
         e.stopPropagation();
     }
     
-    const [values, changeHandler] = useFormHandler()
-    
+    const [values, changeHandler] = useFormHandler();
+
     const buyGadget = (e) => {
+        
         if (values.fullName && values.city && values.post && values.number) {
             let regExp = /(\+380)[0-9]{9}\b/g;
             if (values.number.match(regExp)){
                 const summ = localStorage.getItem('sum') ? parseInt(window.localStorage.getItem('sum')) : 0;
                 localStorage.setItem('sum', summ + parseInt(machedObj.price));
-                setTimeout(() => {setStyles({ display: 'none' })}, 4000);
+                // let boughtGadgets = JSON.parse(localStorage.getItem('gadgets'));
+                // boughtGadgets.push(machedObj);
+                // console.log(boughtGadgets)
+                // localStorage.setItem("gadgets", JSON.stringify(boughtGadgets));
                 setBought(true);
             } else{
                 e.preventDefault();

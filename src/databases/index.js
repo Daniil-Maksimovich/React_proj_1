@@ -154,7 +154,7 @@ export const computers = [
         memory: " 1TB HDD",
         ssd: "240 GB SSD Patriot",
         power: "700W 1stPlayer",
-        price: "9250$"
+        price: "1250$"
     }, 
     
     {

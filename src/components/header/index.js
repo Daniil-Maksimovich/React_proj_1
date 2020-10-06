@@ -13,16 +13,20 @@ import { laptops, computers, phones } from '../../databases/index';
 
 import '../../styles/common.scss';
 import './styles.scss';
+import '../pages/productInfo/styles.scss'
 
 
 const Header = ({children}) => {
+    const [styles, setStyles] = useState('none');
     const [summ, setSum] = useState(0);
     setInterval(() => {
-    const sum = localStorage.getItem('sum')
-    setSum(sum)}, 1000);
+        const sum = localStorage.getItem('sum');
+        setSum(sum);
+    }, 1000);
     const [ value, setValue ] = useState('');
     const gadgets = laptops.concat(computers.concat(phones))
-
+    const boughtGadgets = window.localStorage.getItem('gadgets');
+    console.log(JSON.parse(boughtGadgets));
 
     const handleChange = (e) => {
         setValue(e.target.value.toLowerCase());
@@ -75,6 +79,17 @@ const Header = ({children}) => {
             hideMenu()
         }
     })
+
+    // const showBag = () => {
+    //     setStyles('block');
+    // }
+    // const hideModal = () => {
+    //     setStyles('none');
+    // }
+
+    // const preventClick = (e) => {
+    //     e.stopPropagation();
+    // }
     return(
         <>
             <header className="header">
@@ -99,6 +114,15 @@ const Header = ({children}) => {
                         </div>
                     </div>
 
+                    {/* <div onClick={hideModal} style={{ display: styles }} className="modal">
+                        <div onClick={preventClick} className="modal-main_content">
+                            <h2>Your purchases:</h2>
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div> */}
+
                 </div>
                     <nav className="header-navigation">
                         <div className="container">
@@ -120,14 +144,14 @@ const Header = ({children}) => {
                                     <span className="header-navigation-menu-burger_menu-lines"></span>
                                 </span>
                                 <nav id="nav" className="header-navigation-menu-burger_menu-nav">
-                                <ul>
-                                    <li><NavLink to="/home"><h2>HOME</h2></NavLink></li>
-                                    <li><NavLink to="/sales"><h2>SALES</h2></NavLink></li>
-                                    <li><NavLink to="/computers"><h2>Computers</h2></NavLink></li>
-                                    <li><NavLink to="/laptops"><h2>LAPTOPS</h2></NavLink></li>
-                                    <li><NavLink to="/phones"><h2>PHONES</h2></NavLink></li>
-                                    <li><NavLink to="/contactus"><h2>contact US</h2></NavLink></li>
-                                </ul>
+                                    <ul>
+                                        <li><NavLink to="/home"><h2>HOME</h2></NavLink></li>
+                                        <li><NavLink to="/sales"><h2>SALES</h2></NavLink></li>
+                                        <li><NavLink to="/computers"><h2>Computers</h2></NavLink></li>
+                                        <li><NavLink to="/laptops"><h2>LAPTOPS</h2></NavLink></li>
+                                        <li><NavLink to="/phones"><h2>PHONES</h2></NavLink></li>
+                                        <li><NavLink to="/contactus"><h2>contact US</h2></NavLink></li>
+                                    </ul>
                                 </nav>
                                 <div onClick={hideMenu} className="header-navigation-menu-burger_menu-overlay"></div>
                             </div>

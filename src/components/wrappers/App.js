@@ -19,6 +19,8 @@ import Header from '../header/index';
 import logo from '../../images/logo.png'
 
 const App = () => {
+  
+  // !localStorage.getItem("gadgets") ? () => { localStorage.setItem("gadgets", JSON.stringify([])) }  : null
   const supportsHistory = 'pushState' in window.history;
   return (
     <BrowserRouter 
