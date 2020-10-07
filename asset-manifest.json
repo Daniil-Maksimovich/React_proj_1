@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/React_proj_1/static/css/main.f993560f.chunk.css",
-    "main.js": "/React_proj_1/static/js/main.5781765e.chunk.js",
-    "main.js.map": "/React_proj_1/static/js/main.5781765e.chunk.js.map",
-    "runtime-main.js": "/React_proj_1/static/js/runtime-main.07fe340c.js",
-    "runtime-main.js.map": "/React_proj_1/static/js/runtime-main.07fe340c.js.map",
-    "static/js/2.99d6bf83.chunk.js": "/React_proj_1/static/js/2.99d6bf83.chunk.js",
-    "static/js/2.99d6bf83.chunk.js.map": "/React_proj_1/static/js/2.99d6bf83.chunk.js.map",
-    "index.html": "/React_proj_1/index.html",
-    "precache-manifest.5953658fa070eb05336234f59275cf92.js": "/React_proj_1/precache-manifest.5953658fa070eb05336234f59275cf92.js",
-    "service-worker.js": "/React_proj_1/service-worker.js",
-    "static/css/main.f993560f.chunk.css.map": "/React_proj_1/static/css/main.f993560f.chunk.css.map",
-    "static/js/2.99d6bf83.chunk.js.LICENSE.txt": "/React_proj_1/static/js/2.99d6bf83.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/React_proj_1/static/media/OpenSans-Regular.3ed9575d.ttf",
-    "static/media/Dan.jpg": "/React_proj_1/static/media/Dan.950f6671.jpg",
-    "static/media/Maxim.jpg": "/React_proj_1/static/media/Maxim.c8f6349f.jpg"
+    "main.css": "/React_proj_1/home/static/css/main.1391ac36.chunk.css",
+    "main.js": "/React_proj_1/home/static/js/main.c1d52823.chunk.js",
+    "main.js.map": "/React_proj_1/home/static/js/main.c1d52823.chunk.js.map",
+    "runtime-main.js": "/React_proj_1/home/static/js/runtime-main.8888a8f0.js",
+    "runtime-main.js.map": "/React_proj_1/home/static/js/runtime-main.8888a8f0.js.map",
+    "static/js/2.99d6bf83.chunk.js": "/React_proj_1/home/static/js/2.99d6bf83.chunk.js",
+    "static/js/2.99d6bf83.chunk.js.map": "/React_proj_1/home/static/js/2.99d6bf83.chunk.js.map",
+    "index.html": "/React_proj_1/home/index.html",
+    "precache-manifest.37073b3859c509212968e46fe1c987d9.js": "/React_proj_1/home/precache-manifest.37073b3859c509212968e46fe1c987d9.js",
+    "service-worker.js": "/React_proj_1/home/service-worker.js",
+    "static/css/main.1391ac36.chunk.css.map": "/React_proj_1/home/static/css/main.1391ac36.chunk.css.map",
+    "static/js/2.99d6bf83.chunk.js.LICENSE.txt": "/React_proj_1/home/static/js/2.99d6bf83.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/React_proj_1/home/static/media/OpenSans-Regular.3ed9575d.ttf",
+    "static/media/Dan.jpg": "/React_proj_1/home/static/media/Dan.950f6671.jpg",
+    "static/media/Maxim.jpg": "/React_proj_1/home/static/media/Maxim.c8f6349f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.07fe340c.js",
+    "static/js/runtime-main.8888a8f0.js",
     "static/js/2.99d6bf83.chunk.js",
-    "static/css/main.f993560f.chunk.css",
-    "static/js/main.5781765e.chunk.js"
+    "static/css/main.1391ac36.chunk.css",
+    "static/js/main.c1d52823.chunk.js"
   ]
 }
