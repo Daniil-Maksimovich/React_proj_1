@@ -30,6 +30,9 @@
     }
 }
 .header-search-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     input, button{
         height: 40px;
         border: 1px solid #e1e1e1;
@@ -80,10 +83,10 @@
 
 .header-navigation-menu-burger_menu-button {
     cursor: pointer;
-    height: 27px;
-    width: 27px;
+    height: 30px;
+    width: 30px;
     position: fixed;
-    top: 42px;
+    top: 50px;
     right: 25px;
     z-index: 30;
     border-radius: 50%;
@@ -99,7 +102,7 @@
 .header-navigation-menu-burger_menu-lines::before,
 .header-navigation-menu-burger_menu-lines::after {
     height: 2.5px;
-    width: 14px;
+    width: 15px;
     position: absolute;
     border-radius: 2px;
     background-color: #fff;
@@ -176,18 +179,18 @@
 
 @media screen and (max-width:1200px){
     .container{
-        padding: 0 8px;
+        padding: 0 7px;
     }
 }
 @media screen and (max-width:650px){
-    .header-navigation-menu-burger_menu{
-        display: block;
-    }
     .header-search{
-        height: 40px;
+        padding: 5px 0;
     }
     .header-navigation{
-        height: 30px;
+        padding: 7px 0;
+    }
+    .header-navigation-menu-burger_menu{
+        display: block;
     }
     
     .header-navigation-list{
@@ -197,31 +200,72 @@
     }
     .header-search-bag{
         svg{
-            cursor: pointer;
-            font-size: 20px;
+            font-size: 30px;
         }
         h1{
-            font-size: 15px !important;
+            margin-left: 5px;
         }
     }
     .header-search-input {
+        width: 350px;
         input{
             width: 100%;
-            max-width: 150px;
-            height: 20px;
+            height: 25px;
+            &::placeholder{
+                font-size: 13px;
+            }
         }
         button{
-            height: 20px;
+            height: 25px;
             padding: 0;
             svg{
                 padding-bottom: 3px;
-                font-size:10px;
+                font-size: 13px;
             }
         }
 
     }
     .header-search h1{
-        font-size: 25px;
-        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:550px){
+    .header-search-input {
+        width: 280px;
+    }
+}
+@media screen and (max-width:480px){
+    .header-search-input {
+        width: 200px;
+    }
+    .header-search-bag{
+        svg{
+            font-size: 25px;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .header-search-input {
+        width: 150px;
+    }
+    .header-search-bag{
+        h1{
+            font-size: 23px !important;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .header-search-input {
+        width: 120px;
+        input{
+            width: 100%;
+            height: 20px;
+            &::placeholder{
+                font-size: 13px;
+            }
+        }
+        button{
+            height: 20px;
+        }
     }
 }
