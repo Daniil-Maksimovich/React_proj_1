@@ -1,8 +1,8 @@
 {
+  "homepage": "https://daniil-maksimovich.github.io/React_proj_1",
   "name": "new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://daniil-maksimovich.github.io/React_proj_1/home",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
