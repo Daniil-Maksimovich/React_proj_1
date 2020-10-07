@@ -98,7 +98,7 @@ const Header = ({children}) => {
 
                     <div className="header-search">
                         <div className="logo">
-                            <h1>Aditii</h1>
+                            <h1>eStore</h1>
                         </div>
                         <div className="header-search-input">
                             <input type="text"
