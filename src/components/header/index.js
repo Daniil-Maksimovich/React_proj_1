@@ -17,7 +17,8 @@ import '../pages/productInfo/styles.scss'
 
 
 const Header = ({children}) => {
-    const [styles, setStyles] = useState('none');
+    // const [styles, setStyles] = useState('none');
+
     const [summ, setSum] = useState(0);
     setInterval(() => {
         const sum = localStorage.getItem('sum');
@@ -110,7 +111,7 @@ const Header = ({children}) => {
                         </div>
                         <div className="header-search-bag">
                             <FontAwesomeIcon icon = {faShoppingBasket}/>
-                            <h1 onClick={showConfirm}>${summ}</h1>
+                            <h1 onClick={showConfirm}>${summ ? summ : 0}</h1>
                         </div>
                     </div>
 
