@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/React_proj_1/static/css/main.c107c3bc.chunk.css",
-    "main.js": "/React_proj_1/static/js/main.2165f621.chunk.js",
-    "main.js.map": "/React_proj_1/static/js/main.2165f621.chunk.js.map",
-    "runtime-main.js": "/React_proj_1/static/js/runtime-main.07fe340c.js",
-    "runtime-main.js.map": "/React_proj_1/static/js/runtime-main.07fe340c.js.map",
-    "static/js/2.bd518315.chunk.js": "/React_proj_1/static/js/2.bd518315.chunk.js",
-    "static/js/2.bd518315.chunk.js.map": "/React_proj_1/static/js/2.bd518315.chunk.js.map",
-    "index.html": "/React_proj_1/index.html",
-    "precache-manifest.a03114be8eb36ad0593e74ea9b70f96d.js": "/React_proj_1/precache-manifest.a03114be8eb36ad0593e74ea9b70f96d.js",
-    "service-worker.js": "/React_proj_1/service-worker.js",
-    "static/css/main.c107c3bc.chunk.css.map": "/React_proj_1/static/css/main.c107c3bc.chunk.css.map",
-    "static/js/2.bd518315.chunk.js.LICENSE.txt": "/React_proj_1/static/js/2.bd518315.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/React_proj_1/static/media/OpenSans-Regular.3ed9575d.ttf",
-    "static/media/Dan.jpg": "/React_proj_1/static/media/Dan.950f6671.jpg",
-    "static/media/Maxim.jpg": "/React_proj_1/static/media/Maxim.c8f6349f.jpg"
+    "main.css": "/eStore/static/css/main.a2d09c4d.chunk.css",
+    "main.js": "/eStore/static/js/main.3a07609f.chunk.js",
+    "main.js.map": "/eStore/static/js/main.3a07609f.chunk.js.map",
+    "runtime-main.js": "/eStore/static/js/runtime-main.77654232.js",
+    "runtime-main.js.map": "/eStore/static/js/runtime-main.77654232.js.map",
+    "static/js/2.24fd9ebb.chunk.js": "/eStore/static/js/2.24fd9ebb.chunk.js",
+    "static/js/2.24fd9ebb.chunk.js.map": "/eStore/static/js/2.24fd9ebb.chunk.js.map",
+    "index.html": "/eStore/index.html",
+    "precache-manifest.e64be017a9b8550ac410e49b586fa130.js": "/eStore/precache-manifest.e64be017a9b8550ac410e49b586fa130.js",
+    "service-worker.js": "/eStore/service-worker.js",
+    "static/css/main.a2d09c4d.chunk.css.map": "/eStore/static/css/main.a2d09c4d.chunk.css.map",
+    "static/js/2.24fd9ebb.chunk.js.LICENSE.txt": "/eStore/static/js/2.24fd9ebb.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/eStore/static/media/OpenSans-Regular.3ed9575d.ttf",
+    "static/media/Dan.jpg": "/eStore/static/media/Dan.950f6671.jpg",
+    "static/media/Maxim.jpg": "/eStore/static/media/Maxim.c8f6349f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.07fe340c.js",
-    "static/js/2.bd518315.chunk.js",
-    "static/css/main.c107c3bc.chunk.css",
-    "static/js/main.2165f621.chunk.js"
+    "static/js/runtime-main.77654232.js",
+    "static/js/2.24fd9ebb.chunk.js",
+    "static/css/main.a2d09c4d.chunk.css",
+    "static/js/main.3a07609f.chunk.js"
   ]
 }
