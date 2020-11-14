@@ -31,7 +31,7 @@ const App = () => {
           <link rel="icon" href={logo}/>
         </Helmet>
         <Header>
-          {/* <Redirect from="/" to="/home"/> */}
+          <Redirect from="/" to="/home"/>
           <Switch>
             <Route path="/home" component={Home}/>
             <Route exact path="/sales" component={Sales}/>
