@@ -19,7 +19,7 @@ import Header from '../header/index';
 import logo from '../../images/logo.png'
 
 const App = () => {
-  
+  console.log(window.location)
   // !localStorage.getItem("gadgets") ? () => { localStorage.setItem("gadgets", JSON.stringify([])) }  : null
   const supportsHistory = 'pushState' in window.history;
   return (
@@ -31,7 +31,7 @@ const App = () => {
           <link rel="icon" href={logo}/>
         </Helmet>
         <Header>
-          <Redirect from="/" to="/home"/>
+          {/* <Redirect from="/" to="/home"/> */}
           <Switch>
             <Route path="/home" component={Home}/>
             <Route exact path="/sales" component={Sales}/>

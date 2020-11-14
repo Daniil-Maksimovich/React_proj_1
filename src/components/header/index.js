@@ -168,7 +168,7 @@ const Header = ({children}) => {
 }
 
 Header.propTypes = {
-    children: PropTypes.array.isRequired
+    children: PropTypes.any.isRequired
 }
 
 export default Header 
