@@ -43,7 +43,7 @@ const App = () => {
             <Route path="/computers/:computerid"  component={ProductInfo}/>
             <Route path="/laptops/:laptopid" component={ProductInfo}/>
             <Route path="/phones/:phoneid" component={ProductInfo}/>
-            <Route component={NotFound}/>
+            <Route component={Home}/>
           </Switch>
         </Header>
       </ErrorBoundary>
