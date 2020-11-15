@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import ProductBlock from '../../productBlock/index';
 
@@ -6,6 +7,9 @@ const Search = () => {
     const machedArray = JSON.parse(window.localStorage.getItem('machedArray'));
     return(
             <div className="wrapper">
+                <Helmet>
+                    <title>Search</title>
+                </Helmet>
                 {
                     machedArray.length ? (machedArray.map( ( item, key ) => {
                         return(

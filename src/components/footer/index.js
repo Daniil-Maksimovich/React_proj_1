@@ -7,7 +7,7 @@ const Footer = () => {
     return(
         <footer>
             <div>
-                <p>Copyright © 2020 Css Author</p>
+                <p>Copyright by Daniil Maksimovich © 2020</p>
             </div>
         </footer>
     )
