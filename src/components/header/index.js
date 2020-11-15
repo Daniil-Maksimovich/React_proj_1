@@ -70,10 +70,10 @@ const Header = ({children}) => {
     }
     const hideMenu = () => {
         navigationList.style.display = 'none';
-        mainMenu.classList.toggle("burger_menu-active");
+        mainMenu.classList.remove("burger_menu-active");
     }
     navigationList && navigationList.addEventListener('click', e => {
-        if(e.target.tagName === 'H2'){
+        if(e.target.tagName === 'A'){
             hideMenu()
         }
     })
