@@ -65,9 +65,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    h2{
-        font-weight: normal;
-        font-size: 30px;
+    a{
+        font-weight: bold;
+        font-size: 23px;
     }
 }
 .header-navigation-border{
@@ -86,15 +86,15 @@
     height: 30px;
     width: 30px;
     position: fixed;
-    top: 50px;
+    top: 51px;
     right: 25px;
     z-index: 30;
     border-radius: 50%;
     background-color: $blueback;
 }
 
-.header-navigation-menu-burger_menu-button:hover .header-navigation-menu-burger_menu-lines {
-    filter: brightness(0.7);
+.header-navigation-menu-burger_menu-button:hover {
+    filter: brightness(0.9);
     transition: 0.2s;
 }
 

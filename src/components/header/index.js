@@ -104,30 +104,30 @@ const Header = ({children}) => {
                     <nav className="header-navigation">
                         <div className="container">
                             <ul className="header-navigation-list">
-                                <li><NavLink to="/home"><h2>HOME</h2></NavLink></li>
+                                <li><NavLink to="/home">HOME</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
-                                <li><NavLink to="/sales"><h2>SALES</h2></NavLink></li>
+                                <li><NavLink to="/sales">SALES</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
-                                <li><NavLink to="/computers"><h2>Computers</h2></NavLink></li>
+                                <li><NavLink to="/computers">COMPUTERS</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
-                                <li><NavLink to="/laptops"><h2>LAPTOPS</h2></NavLink></li>
+                                <li><NavLink to="/laptops">LAPTOPS</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
-                                <li><NavLink to="/phones"><h2>PHONES</h2></NavLink></li>
+                                <li><NavLink to="/phones">PHONES</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
-                                <li><NavLink to="/contactus"><h2>CONTACTS</h2></NavLink></li>
+                                <li><NavLink to="/contactus">CONTACTS</NavLink></li>
                             </ul>
                             <div className="header-navigation-menu-burger_menu">
                                 <span onClick={collapseMenu} className="header-navigation-menu-burger_menu-button">
                                     <span className="header-navigation-menu-burger_menu-lines"></span>
                                 </span>
-                                <nav id="nav" className="header-navigation-menu-burger_menu-nav">
+                                <nav className="header-navigation-menu-burger_menu-nav">
                                     <ul>
-                                        <li><NavLink to="/home"><h2>HOME</h2></NavLink></li>
-                                        <li><NavLink to="/sales"><h2>SALES</h2></NavLink></li>
-                                        <li><NavLink to="/computers"><h2>Computers</h2></NavLink></li>
-                                        <li><NavLink to="/laptops"><h2>LAPTOPS</h2></NavLink></li>
-                                        <li><NavLink to="/phones"><h2>PHONES</h2></NavLink></li>
-                                        <li><NavLink to="/contactus"><h2>contact US</h2></NavLink></li>
+                                        <li><NavLink to="/home">HOME</NavLink></li>
+                                        <li><NavLink to="/sales">SALES</NavLink></li>
+                                        <li><NavLink to="/computers">COMPUTERS</NavLink></li>
+                                        <li><NavLink to="/laptops">LAPTOPS</NavLink></li>
+                                        <li><NavLink to="/phones">PHONES</NavLink></li>
+                                        <li><NavLink to="/contactus">CONTACT US</NavLink></li>
                                     </ul>
                                 </nav>
                                 <div onClick={hideMenu} className="header-navigation-menu-burger_menu-overlay"></div>
