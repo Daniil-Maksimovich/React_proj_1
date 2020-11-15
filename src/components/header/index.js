@@ -17,7 +17,6 @@ import '../pages/productInfo/styles.scss'
 
 
 const Header = ({children}) => {
-    // const [styles, setStyles] = useState('none');
 
     const [summ, setSum] = useState(0);
     setInterval(() => {
@@ -46,13 +45,11 @@ const Header = ({children}) => {
             e.preventDefault()
         }
     }
-    
     const pressEnter = (e) => {
         if (e.which === 13) {
             document.querySelector("#searchButton").click();
         }
     }
-
     const showConfirm = () => {
         if (localStorage.getItem('sum') !== "0"){
             let result = window.confirm('Do you really want to delete your purchases?');
@@ -80,17 +77,6 @@ const Header = ({children}) => {
             hideMenu()
         }
     })
-
-    // const showBag = () => {
-    //     setStyles('block');
-    // }
-    // const hideModal = () => {
-    //     setStyles('none');
-    // }
-
-    // const preventClick = (e) => {
-    //     e.stopPropagation();
-    // }
     return(
         <>
             <header className="header">
@@ -114,16 +100,6 @@ const Header = ({children}) => {
                             <h1 onClick={showConfirm}>${summ ? summ : 0}</h1>
                         </div>
                     </div>
-
-                    {/* <div onClick={hideModal} style={{ display: styles }} className="modal">
-                        <div onClick={preventClick} className="modal-main_content">
-                            <h2>Your purchases:</h2>
-                            <ul>
-                                
-                            </ul>
-                        </div>
-                    </div> */}
-
                 </div>
                     <nav className="header-navigation">
                         <div className="container">

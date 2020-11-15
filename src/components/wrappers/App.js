@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter , Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import ErrorBoundary from '../../helpers/ErrorBoundary';
@@ -19,21 +19,20 @@ import Header from '../header/index';
 import logo from '../../images/logo.png'
 
 const App = () => {
-  console.log(window.location)
-  // !localStorage.getItem("gadgets") ? () => { localStorage.setItem("gadgets", JSON.stringify([])) }  : null
   const supportsHistory = 'pushState' in window.history;
   return (
     <BrowserRouter 
       forceRefresh={!supportsHistory}
+      basename="eStore"
     >
       <ErrorBoundary>
         <Helmet>
           <link rel="icon" href={logo}/>
         </Helmet>
         <Header>
-          <Redirect from="/" to="/home"/>
+          <Redirect from="/" to="home"/>
           <Switch>
-            <Route path="/home" component={Home}/>
+            <Route exact path="/home" component={Home}/>
             <Route exact path="/sales" component={Sales}/>
             <Route exact path="/contactus" component={ContactUs}/>
             <Route exact path="/laptops" component={Laptops}/>
@@ -43,7 +42,7 @@ const App = () => {
             <Route path="/computers/:computerid"  component={ProductInfo}/>
             <Route path="/laptops/:laptopid" component={ProductInfo}/>
             <Route path="/phones/:phoneid" component={ProductInfo}/>
-            <Route component={Home}/>
+            <Route component={NotFound}/>
           </Switch>
         </Header>
       </ErrorBoundary>
