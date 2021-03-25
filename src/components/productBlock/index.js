@@ -6,31 +6,28 @@ import ImageLoader from '../imageLoader/index';
 
 import './styles.scss';
 
-
-const ProductBlock = ({ path, image, alt, id, name, body, graphics, price }) => {
-    
-    return(
-        <Link className="product_block" to={`${path}/${id}`}>
-            <ImageLoader 
-                path={image}
-                alt={alt}
-            />
-            <div className="product_block-content" >
-                <div>
-                    <h2>
-                        {name}
-                        {body}
-                        {graphics}
-                    </h2>
-                </div>
-                <div className="product_block-content-button">
-                    <h2>{price}</h2>
-                    <button className="button">BUY NOW</button>
-                </div>
+const ProductBlock = ({ path, image, alt, id, name, body, graphics, price }) => (
+    <Link className="product_block" to={`${path}/${id}`}>
+        <ImageLoader 
+            path={image}
+            alt={alt}
+        />
+        <div className="product_block-content" >
+            <div>
+                <h2>
+                    {name}
+                    {body}
+                    {graphics}
+                </h2>
             </div>
-        </Link>
-    )
-}
+            <div className="product_block-content-button">
+                <h2>{price}</h2>
+                <button className="button">BUY NOW</button>
+            </div>
+        </div>
+    </Link>
+);
+
 ProductBlock.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,

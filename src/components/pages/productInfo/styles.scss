@@ -59,56 +59,58 @@
         cursor: pointer;
     }
 }
-.modal{
-    height: 100%;
-    width: 100%;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 100;
-
-    background-color: rgba( 0, 0, 0, 0.5);
-}
-.modal-main_content{
-    width: 500px;
-    height: 500px;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border-radius: 10px;
-}
-.form .button{
-    display: block;
-    margin: 40px auto;
-    font-size: 25px;
-    font-weight: bold;   
-}
 .heading .button{
     margin-top: 30px;
     font-size: 25px;
     font-weight: bold;    
 }
+.popup{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    opacity: 0;
+    transition: .2s;
+    &.shown{
+        transition: .2s;
+        opacity: 1;
+    }
+}
 
-.form-input{
-    label{
-        display: block;
-        font-size: 20px;
-        font-weight: bold;
-        margin: 20px;
-        color: rgba( 0, 0, 0, 0.7);
-        input{
-            width: 250px;
-            height: 30px;
-            float: right;
-            margin-left: 20px;
-            border: 1px solid $grey;
-            border-radius: 5px;
-            outline: none;
-        }
+.popup__content{
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 30px;
+    border: 4px solid $green;
+    h1{
+        color: $green;
+        opacity: .7;
+        text-transform: none !important;
+        margin-bottom: 10px;
+    }
+    b{
+        color: $green;
+        filter: brightness(.7);
+        font-size: 17px;
+    }
+    a{
+        color: rgb(79, 139, 173);
+    }
+    span{
+        position: absolute;
+        top: 3px;
+        right: 20px;
+        font-size: 35px;
+        transform: rotate(45deg);
+        cursor: pointer;
     }
 }
 
@@ -159,26 +161,6 @@
         padding: 20px 0;
         .image_block img{
             height: 200px;
-        }
-    }
-}
-@media screen and (max-width: 500px){
-    .modal-main_content{
-        width: 320px;
-        height: 320px;
-    }
-    .form .button{
-        font-size: 15px;   
-    }
-    
-    .form-input{
-        label{
-            font-size: 12px;
-            margin: 8px;
-            input{
-                width: 180px;
-                height: 20px;
-            }
         }
     }
 }

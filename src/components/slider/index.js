@@ -13,13 +13,8 @@ import './styles.scss';
 const Slider = ({arr}) => {
     
     const [x, setX] = useState(0);
-    const goPrev = () => {
-        x === 0 ? setX(-100 * (arr.length - 1)) : setX(x + 100);
-    }
-    const goNext = () => {
-
-        (x === -100 * (arr.length - 1)) ? setX(0) : setX(x - 100);
-    }
+    const goPrev = () => x === 0 ? setX(-100 * (arr.length - 1)) : setX(x + 100);
+    const goNext = () => (x === -100 * (arr.length - 1)) ? setX(0) : setX(x - 100); 
 
     return(
         <section className="slider">

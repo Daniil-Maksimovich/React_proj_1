@@ -17,8 +17,8 @@ const LinkOptions = ({styles}) => {
                         <Link to="/laptops">Show more</Link>
                     </div>
                 </div>
-                <div className="link_options-option">
-                    <ImageLoager styles={styles} path="https://pngriver.com/wp-content/uploads/2018/03/Download-Gaming-Computer-PNG-Image-For-Designing-Purpose.png" alt="product" />
+                <div className="link_options-option big">
+                    <ImageLoager styles={styles} path="https://www.compday.ru/files/cat/184438.jpg" alt="product" />
                     <div className="link_options-option-content">
                         <h2>Computers</h2>
                         <Link to="/computers">Show more</Link>

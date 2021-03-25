@@ -18,7 +18,10 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Bebas Neue', cursive ;
+    font-family: 'Bebas Neue', cursive;
+}
+h1{
+    color: rgb(70, 70, 70);
 }
 ul{
     list-style: none;
@@ -36,8 +39,13 @@ button{
 }
 .active{
     color: #fff94f;
+    svg{
+        color: #f8f368;
+    }
 }
-
+.main_content{
+    min-height: 79.9vh;
+}
 .container{
     width: 100%;
     max-width: 1200px;

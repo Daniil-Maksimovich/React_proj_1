@@ -18,9 +18,9 @@
     align-items: center;
     svg{
         font-size: 40px;
+        cursor: pointer;
     }
     h1{
-        cursor: pointer;
         font-family: 'Bebas Neue', cursive ;
         color: $grey;
         font-size: 40px;
@@ -83,11 +83,11 @@
 
 .header-navigation-menu-burger_menu-button {
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: fixed;
-    top: 51px;
-    right: 25px;
+    top: 50px;
+    left: 25px;
     z-index: 30;
     border-radius: 50%;
     background-color: $blueback;
@@ -102,7 +102,7 @@
 .header-navigation-menu-burger_menu-lines::before,
 .header-navigation-menu-burger_menu-lines::after {
     height: 2.5px;
-    width: 15px;
+    width: 20px;
     position: absolute;
     border-radius: 2px;
     background-color: #fff;
@@ -116,13 +116,13 @@
 }
 
 .header-navigation-menu-burger_menu-lines::after {
-    top: -5px;
+    top: -6px;
     content: '';
     transition: .2s;
 }
 
 .header-navigation-menu-burger_menu-lines::before {
-    top: 5px;
+    top: 6px;
     content: '';
     transition: .2s;
 }
@@ -143,16 +143,18 @@
 
 .header-navigation-menu-burger_menu-nav{
     height: 100%;
-    width: 180px;
-    padding-top: 50px;
+    width: 50%;
+    min-width: 200px;
+    padding-top: 80px;
     position: fixed;
     z-index: 20;
-    display: none;
+    left: -150%;
     flex-flow: column;
     background-color: $blueback;
     overflow: auto;
     right: 0;
     top: 0;
+    transition: .4s linear;
     ul{
         display: block;
         li{
@@ -160,8 +162,9 @@
         }
     }
 }
-.header-navigation-menu-burger_menu-nav .burger_menu-active{
-    right: 0;
+.burger_menu-active .header-navigation-menu-burger_menu-nav {
+    transition: .4s linear;
+    left: 0;
 }
 .header-navigation-menu-burger_menu-overlay{
     width: 100%;
@@ -171,11 +174,11 @@
     top: 0;
     left: 0;
     z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .burger_menu-active .header-navigation-menu-burger_menu-overlay{
     display: block;
 }
-
 
 @media screen and (max-width:1200px){
     .container{
@@ -187,7 +190,7 @@
         padding: 5px 0;
     }
     .header-navigation{
-        padding: 7px 0;
+        padding: 12px 0;
     }
     .header-navigation-menu-burger_menu{
         display: block;
@@ -211,6 +214,7 @@
         input{
             width: 100%;
             height: 25px;
+            font-size: 13px;
             &::placeholder{
                 font-size: 13px;
             }

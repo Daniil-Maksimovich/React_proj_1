@@ -11,13 +11,21 @@
 .heading{
     margin: 30px 0;
 }
+.team .heading{
+    margin-bottom: 0;
+}
 .team-members{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+.team .container .heading h1{
+    display: block !important;
 }
 .team-members-member{
+    margin: 20px 5%;
     text-align: center;
     h2{
         font-size: 35px;
@@ -25,6 +33,7 @@
 
     img{
         height: 250px;
+        width: 250px;
         border-radius: 50%;
         margin-bottom: 20px;
     }
@@ -110,16 +119,8 @@
             height: 30px;
         }
     }
-    
 }
-
 @media screen and (max-width:1000px){
-    .team-members{
-        display: block;
-    }
-    .team-members-member{
-        margin-top: 30px;
-    }
     .hidden {
         display: none;
     }
@@ -132,6 +133,7 @@
     
     .team-members-member img{
         height: 200px;
+        width: 200px;
     }
     .contacts-content {
         padding: 0;

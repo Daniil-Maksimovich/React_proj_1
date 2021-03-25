@@ -1,5 +1,4 @@
-export const computers = [
-    {
+export const computers = [{
         id: "1",
         img: "https://brain.com.ua/static/images/prod_img/3/5/U0269135_big.jpg",
         name: "HELLCAT PRO",
@@ -13,7 +12,7 @@ export const computers = [
         power: "500W DeepCool",
         price: "500$"
     },
-    
+
     {
         id: "2",
         img: "https://i2.rozetka.ua/goods/15901515/158971303_images_15901515176.jpg",
@@ -27,8 +26,8 @@ export const computers = [
         memory: "1TB HDD",
         power: "500W DeepCool",
         price: "550$"
-    }, 
-    
+    },
+
     {
         id: "3",
         img: "https://i2.rozetka.ua/goods/15643698/158971345_images_15643698113.jpg",
@@ -44,7 +43,7 @@ export const computers = [
         power: " 550W 1stPlayer",
         price: "600$"
     },
-    
+
     {
         id: "4",
         img: "https://i2.rozetka.ua/goods/15901518/158971569_images_15901518193.jpg",
@@ -60,7 +59,7 @@ export const computers = [
         power: "500W Frontier",
         price: "650$"
     },
-    
+
     {
         id: "5",
         img: "https://hotline.ua/img/tx/163/1633659935.jpg",
@@ -75,8 +74,8 @@ export const computers = [
         ssd: "480 GB Kingston",
         power: "500W DeepCool",
         price: "700$"
-    }, 
-    
+    },
+
     {
         id: "6",
         img: "https://i8.rozetka.ua/goods/15643715/158970981_images_15643715802.jpg",
@@ -90,9 +89,9 @@ export const computers = [
         memory: "1TB HDD",
         ssd: "120 GB Patriot",
         power: "550W 1stPlayer",
-        price: "750 $"
-    }, 
-    
+        price: "750$"
+    },
+
     {
         id: "7",
         img: "https://digitalfury.pro/media/component100677.jpg",
@@ -107,8 +106,8 @@ export const computers = [
         ssd: " 240 GB SSD",
         power: " 600W 1stPlayer",
         price: "800$"
-    }, 
-    
+    },
+
     {
         id: "8",
         img: "https://hst.co.uk/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/g/m/gmxcseclipse-03.png",
@@ -123,8 +122,8 @@ export const computers = [
         ssd: "120 GB SSD Now",
         power: "Chieftec 850 W ATX 2.3 APFC",
         price: "850$"
-    }, 
-    
+    },
+
     {
         id: "9",
         img: "https://cdn.mwave.com.au/images/400/AB55358_9.jpg",
@@ -139,8 +138,8 @@ export const computers = [
         ssd: "120 GB SSD Patriot",
         power: "550W 1stPlayer",
         price: "900$"
-    }, 
-    
+    },
+
     {
         id: "10",
         img: "https://images-na.ssl-images-amazon.com/images/I/71aHg4xnyRL._AC_SX466_.jpg",
@@ -155,8 +154,8 @@ export const computers = [
         ssd: "240 GB SSD Patriot",
         power: "700W 1stPlayer",
         price: "1250$"
-    }, 
-    
+    },
+
     {
         id: "11",
         img: "https://i2.rozetka.ua/goods/15643699/158971408_images_15643699870.png",
@@ -171,8 +170,8 @@ export const computers = [
         ssd: "120 GB",
         power: " Chieftec 700 W ATX",
         price: "1300$"
-    }, 
-    
+    },
+
     {
         id: "12",
         img: "https://s.ek.ua/jpg/1347156.jpg",
@@ -187,8 +186,8 @@ export const computers = [
             ": 1900MB/s",
         power: "Chieftec 850 W ATX 2.3 APFC",
         price: "2000$"
-    }, 
-    
+    },
+
     {
         id: "13",
         img: "https://hotline.ua/img/tx/114/1146811775.jpg",
@@ -203,8 +202,8 @@ export const computers = [
         ssd: " 250 GB SSD ",
         power: " Chieftec 700 W ATX",
         price: "2100$"
-    }, 
-    
+    },
+
     {
         id: "14",
         img: "https://s.pn.com.ua/i/md/1001/2604077/2604077_00p.jpg",
@@ -219,8 +218,8 @@ export const computers = [
         ssd: "1000 GB Kingston A400 M.2",
         power: "Chieftec 1000 W ATX",
         price: "2300$"
-    }, 
-    
+    },
+
     {
         id: "15",
         img: "https://delta-game.ru/wp-content/uploads/2020/08/POSEIDON.png",
@@ -237,8 +236,7 @@ export const computers = [
         price: "2500$"
     }
 ];
-export const laptops = [
-    {
+export const laptops = [{
         id: '1',
         img: "https://www.lenovo.com/medias/lenovo-laptop-yoga-c940-hero-15.png?context=bWFzdGVyfHJvb3R8MTczMjIzOHxpbWFnZS9wbmd8aGM1L2hiNS8xMDU0NzY4MjM0NDk5MC5wbmd8MDc5ZGFkMzBiYTk0NTgxYmUzNTdhYTZjYTViOTk1NmFhN2JlMmRlMmJjOTkwNTM4NjZjZDQ5Njc5N2Q2ZmY0YQ",
         name: "Lenovo IdeaPad Gaming Silver",
@@ -547,8 +545,7 @@ export const laptops = [
 
 export const sales = laptops.filter(item => item.lastPrice !== undefined);
 
-export const phones = [
-    {
+export const phones = [{
         id: "1",
         img: "https://gstore.ua/content/images/12/apple-iphone-se-2020-64gb-red-93078371222684_small11.png",
         name: "Apple iPhone SE (2020)",
@@ -625,7 +622,7 @@ export const phones = [
         camera: "12 MP + 12 MP",
         price: "830$",
     },
-    
+
     {
         id: "8",
         img: "https://i.allo.ua/media/catalog/product/cache/1/image/240x170/9df78eab33525d08d6e5fb8d27136e95/a/p/apple_iphone_x_64gb_mqad2_silver_2_1_1_1_1_1.jpg",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import './styles.scss';
 
 const NotFound = () => {
     return(
@@ -7,8 +8,9 @@ const NotFound = () => {
             <Helmet>
                 <title>Not Found 404</title>    
             </Helmet>    
-
-            <h1>Not Found 404</h1>
+            <div className="not-found heading">
+                <h1>This page is not found</h1>
+            </div>
         </>
     )
 }

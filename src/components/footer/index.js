@@ -7,7 +7,7 @@ const Footer = () => {
     return(
         <footer>
             <div>
-                <p>Copyright by Daniil Maksimovich © 2020</p>
+                <p>Copyright by Daniil Maksimovich © 2021</p>
             </div>
         </footer>
     )

@@ -18,65 +18,34 @@ import '../pages/productInfo/styles.scss'
 
 const Header = ({children}) => {
 
-    const [summ, setSum] = useState(0);
-    setInterval(() => {
-        const sum = localStorage.getItem('sum');
-        setSum(sum);
-    }, 1000);
     const [ value, setValue ] = useState('');
-    const gadgets = laptops.concat(computers.concat(phones))
-    const boughtGadgets = window.localStorage.getItem('gadgets');
-    console.log(JSON.parse(boughtGadgets));
+    const gadgets = laptops.concat(computers.concat(phones));
 
-    const handleChange = (e) => {
+    const handleChange = e => {
         setValue(e.target.value.toLowerCase());
     }
-    const searchData = (e) => {
+    const searchData = e => {
         if(value){
             const machedArr = gadgets.filter(item => {
-                if (item.name.toLocaleLowerCase().indexOf(value) !== -1) {
-                    return true
-                }
-                return false
+                if (item.name.toLocaleLowerCase().indexOf(value) !== -1) return true;
+                return false;
             })
             window.localStorage.setItem('machedArray', JSON.stringify(machedArr));
-            setValue('')
-        } else{
-            e.preventDefault()
-        }
+            setValue('');
+        } else e.preventDefault();
     }
-    const pressEnter = (e) => {
-        if (e.which === 13) {
-            document.querySelector("#searchButton").click();
-        }
-    }
-    const showConfirm = () => {
-        if (localStorage.getItem('sum') !== "0"){
-            let result = window.confirm('Do you really want to delete your purchases?');
-            if(result){
-                localStorage.setItem('sum' , 0);
-            }
-        }
-    }
+    const pressEnter = e => e.which === 13 && document.querySelector("#searchButton").click();
+    
     const navigationList = document.querySelector('.header-navigation-menu-burger_menu-nav');
-    const mainMenu = document.querySelector('.header-navigation-menu-burger_menu');
-    const collapseMenu = () => {
-        if (mainMenu.className.match(/burger_menu-active/g)) {
-            navigationList.style.display = 'none';
-        } else {
-            navigationList.style.display = 'flex';
-        }
+    const [menu , setMenu] = useState(null);
+    const collapseMenu = e => {
+        const mainMenu = e.target.parentElement.parentElement.className.includes('header-navigation-menu-burger_menu') ? e.target.parentElement.parentElement : e.target.parentElement;
+        setMenu(mainMenu);
         mainMenu.classList.toggle("burger_menu-active");
     }
-    const hideMenu = () => {
-        navigationList.style.display = 'none';
-        mainMenu.classList.remove("burger_menu-active");
-    }
-    navigationList && navigationList.addEventListener('click', e => {
-        if(e.target.tagName === 'A'){
-            hideMenu()
-        }
-    })
+    const hideMenu = () => menu && menu.classList.remove("burger_menu-active");
+    
+    navigationList && navigationList.addEventListener('click', e =>  e.target.tagName === 'A' && hideMenu() );
     return(
         <>
             <header className="header">
@@ -95,16 +64,15 @@ const Header = ({children}) => {
                             />
                             <button><Link to="/search" id="searchButton" onClick={searchData}><FontAwesomeIcon icon={faSearch} /></Link></button >
                         </div>
-                        <div className="header-search-bag">
+                        <NavLink to="/bag" className="header-search-bag">
                             <FontAwesomeIcon icon = {faShoppingBasket}/>
-                            <h1 onClick={showConfirm}>${summ ? summ : 0}</h1>
-                        </div>
+                        </NavLink>
                     </div>
                 </div>
                     <nav className="header-navigation">
                         <div className="container">
                             <ul className="header-navigation-list">
-                                <li><NavLink to="/home">HOME</NavLink></li>
+                                <li><Link to="/">HOME</Link></li>
                                 <li><div className="header-navigation-border"></div></li>
                                 <li><NavLink to="/sales">SALES</NavLink></li>
                                 <li><div className="header-navigation-border"></div></li>
@@ -142,7 +110,6 @@ const Header = ({children}) => {
         </>
     )
 }
-
 Header.propTypes = {
     children: PropTypes.any.isRequired
 }

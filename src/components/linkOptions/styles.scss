@@ -4,17 +4,22 @@
 .link_options .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .link_options-option{
-    width: 50%;
-    margin: auto;
     display: flex;
     align-items: center;
-    padding: 30px 0;
-}
-.link_options-option .image_block img{
-    height: 200px !important;
+    padding: 30px 2rem;
+    .image_block img{
+        width: 180px;
+        height: auto;
+    }
+    &.big{
+        .image_block img{
+            width: 120px;
+        }
+    }
 }
 .link_options-option-content{
     margin-left: 30px;
@@ -30,7 +35,7 @@
         font-family: 'Bebas Neue', cursive ;
         font-size: 20px;
         border: none;
-
+        white-space: nowrap;
         color: #f2f2f2;
         position: relative;
         transition: .25s; 
@@ -42,25 +47,25 @@
     }
 }
 @media screen and (max-width:1200px){
-    .link_options .container{
-        display: block;
-        text-align: center;
-    }
+    // .link_options .container{
+    //     display: block;
+    //     text-align: center;
+    // }
 }
-@media screen and (max-width:720px){
-    .link_options-option{
-        width: 80%;
-    }
-    .link_options-option .image_block img{
-        height: 150px !important;
-    }
-}
+// @media screen and (max-width:720px){
+//     .link_options-option{
+//         width: 80%;
+//     }
+//     .link_options-option .image_block img{
+//         height: 150px !important;
+//     }
+// }
 @media screen and (max-width:450px){
     .link_options-option{
         width: 100%;
-        .image_block img{
-            height: 140px !important;            
-        }
+        // .image_block img{
+        //     height: 140px !important;            
+        // }
         h2{
             font-size: 30px;
         }

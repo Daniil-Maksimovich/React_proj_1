@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import {Link} from 'react-router-dom';
 
 import ImageLoader from '../../imageLoader';
-
-import useFormHandler from '../../../helpers/useHandler';
 
 import { laptops , computers, phones } from '../../../databases/index';
 
@@ -12,71 +11,55 @@ import './styles.scss';
 
 const ProductInfo = ({location}) => {
     
-    const [styles, setStyles] = useState('none');
-    const [bought, setBought] = useState(false)
     const pattern = /[0-9]/g;
-
     let arr = [];
-
     const path = location.pathname;
+    let type = '';
+    
     if (path.match('computers')) {
+        type = 'computers';
         arr = computers;
     } else if (path.match('laptops')){
+        type = 'laptops';
         arr = laptops;
     } else{
-        arr = phones
+        type = 'phones';
+        arr = phones;
     }
-
-    const id = path.match(pattern).join('');
-    const nullsArr = arr && arr.map(item => {
-        return item.id === id ? item : null
-    })
-
-    let machedObj = nullsArr.filter(item => {
-        return item !== null
-    })
-    machedObj = machedObj[0];
-
-    const showModal = () => {
-        setStyles('block');
-    }
-
-    const hideModal = () => {
-        setStyles('none');
-    }
-
-    const preventClick = (e) => {
-        e.stopPropagation();
-    }
+    const modal = React.createRef();
+    const closeModalBtn = React.createRef();
     
-    const [values, changeHandler] = useFormHandler();
-
-    const buyGadget = (e) => {
-        
-        if (values.fullName && values.city && values.post && values.number) {
-            let regExp = /(\+380)[0-9]{9}\b/g;
-            if (values.number.match(regExp)){
-                const summ = localStorage.getItem('sum') ? parseInt(window.localStorage.getItem('sum')) : 0;
-                localStorage.setItem('sum', summ + parseInt(machedObj.price));
-                // let boughtGadgets = JSON.parse(localStorage.getItem('gadgets'));
-                // boughtGadgets.push(machedObj);
-                // console.log(boughtGadgets)
-                // localStorage.setItem("gadgets", JSON.stringify(boughtGadgets));
-                setBought(true);
-            } else{
-                e.preventDefault();
-                window.alert('Your number is incorrect')
-            }
-        } else{
-            e.preventDefault();
-            window.alert('You shoud fill up all inputs')
+    const id = path.match(pattern).join('');
+    const machedObj = arr && arr.map(item => item.id === id ? item : null).filter(item => item !== null)[0];
+    
+    const buyGadget = () => {
+        modal.current.style.display = 'flex';
+        setTimeout(() => {
+            modal.current.classList.add('shown');
+        },100);
+        const buys = JSON.parse(window.localStorage.getItem('buys')) || [];
+        const buy = {
+            id: machedObj.id,
+            img: machedObj.img,
+            name: machedObj.name,
+            price: machedObj.price,
+            count: 1,
+            type: type
+        }
+        const index = buys.findIndex(item => item.id === machedObj.id && item.name === machedObj.name);
+        if (index > -1) buys[index].count++;
+        else buys.unshift(buy);
+        window.localStorage.setItem('buys', JSON.stringify(buys));
+    }
+    const closeModal = e => {
+        const {current} = modal;
+        if(e.target === current || e.target === closeModalBtn.current){
+            current.classList.remove('shown');
+            setTimeout(() => {
+                current.style.display = 'none';
+            }, 250);
         }
     }
-
-    const buyMore = () => {
-        setBought(false)
-    }
-
     return (
         <>
             <Helmet>
@@ -105,65 +88,19 @@ const ProductInfo = ({location}) => {
                         {machedObj.power && <h2><b>Power: </b>{machedObj.power}</h2>}
                         <div className="button_wrapper">
                             <h3>{machedObj.lastPrice && machedObj.lastPrice}</h3>
-                            <button onClick={showModal}>{machedObj.price}</button>
+                            <button onClick={buyGadget}>{machedObj.price}</button>
                         </div>
                     </div>
                 </div>
 
             </section>
-            
-            <section onClick={hideModal} style={{display: styles}} className="modal">
-                <div onClick={preventClick} className="modal-main_content">
-                    {!bought ? (
-                        <div className="form">
-                            <div className="heading">
-                                <h1>Fill up the form</h1>
-                            </div>
-                            <div className="form-input">
-                                <label>
-                                    Full name
-                                    <input type="text"
-                                        name="fullName"
-                                        value={values.fullName}
-                                        onChange={changeHandler}
-                                    />
-                                </label>
-                                <label>
-                                    City
-                                    <input type="text"
-                                        name="city"
-                                        value={values.city}
-                                        onChange={changeHandler}
-                                    />
-                                </label>
-                                <label>
-                                    Post office
-                                    <input type="text"
-                                        name="post"
-                                        value={values.post}
-                                        onChange={changeHandler}
-                                    />
-                                </label>
-                                <label>
-                                    Phone number
-                                    <input type="text"
-                                        name="number"
-                                        value={values.number}
-                                        onChange={changeHandler}
-                                    />
-                                </label>
-                            </div>
-                            <button className="button" onClick={buyGadget}>Buy!</button>
-                        </div>
-                    ) : <div className="heading">
-                            <h1>
-                                Congratulations!
-                            </h1>
-                            <h2>Our managers will contact you to agree on the delivery.</h2>
-                            <button className="button" onClick={buyMore}>Buy more</button>
-                        </div>}
+            <div className="popup" onClick={closeModal} ref={modal}>
+                <div className="popup__content">
+                    <h1>Your purchase is successfully added to basket</h1>
+                    <b>You can see it in the <Link to="/bag">basket</Link></b>
+                    <span ref={closeModalBtn}>+</span>
                 </div>
-            </section>
+            </div>
         </>
     )
 }
