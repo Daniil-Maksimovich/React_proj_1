@@ -16,7 +16,7 @@ const ImageLoader = ({ path, alt, loaderGif }) => {
     }
     return(
         <div className="image_block">
-            { loaded ? <img src={path} alt={alt} /> : <img src={loaderGif} alt="Loading"/> }
+            { loaded ? <img loading="lazy" src={path} alt={alt} /> : <img loading="lazy" src={loaderGif} alt="Loading"/> }
         </div>
     )
 }
