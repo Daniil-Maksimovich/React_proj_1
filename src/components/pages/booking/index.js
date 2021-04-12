@@ -62,7 +62,7 @@ const Booking = () => {
       modal.current.classList.add('shown');
     },100);
     setTimeout(() => {
-      window.location = '/';
+      window.location = '/eStore/';
       window.localStorage.setItem('buys', '[]')
     }, 6000);
   }
